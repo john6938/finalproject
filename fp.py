@@ -95,7 +95,7 @@ def find_most_likely_text(known_text_1, known_text_2, questioned_text):
         log_likelihood_larger = known_text_2
 
     # Print most likely text to the command line
-    print(log_likelihood_larger)
+    print("The most likely text is {}.".format(log_likelihood_larger))
     return log_likelihood_larger
 
 
@@ -113,7 +113,7 @@ def get_ratio_difference(known_text: object, questioned_text: object):
         ave_ratio_diff = 0
     return ave_ratio_diff
 
-
+'''
 def ratio_plot(ratio_dict: dict, marker_name):
     x = [marker for marker, _ in ratio_dict.items()]
     x_ = x[:10]
@@ -129,7 +129,7 @@ def ratio_plot(ratio_dict: dict, marker_name):
     plt.title('Ratio - {}'.format(marker_name))
     plt.legend() 
     plt.show()
-
+'''
 
 if __name__ == '__main__':
 
@@ -184,14 +184,19 @@ if __name__ == '__main__':
             num_of_satisfied_condition += 1
     
     if num_of_satisfied_condition >= THRESHOLD_FOR_VERLIFICATION:
-        print("The text {} is considered as written by the author of the text {}.".format(questioned_text, most_likely_known_text))
+        if sys.argv[4] == "RUN":
+            print("The questioned text \"{}\" is considered as written by the author of the text \"{}\".".format(questioned_text, most_likely_known_text))
         # For Test
         if sys.argv[4] == "TEST":
             print(most_likely_known_text)
             print("1")
     else:
-        print("The text {} is NOT considered as written by the author of the text {}.".format(questioned_text, most_likely_known_text))
+        if sys.argv[4] == "RUN":
+            print("The text \"{}\" is NOT considered as written by the author of the text \"{}\".".format(questioned_text, most_likely_known_text))
         # For Test
         if sys.argv[4] == "TEST":
             print(most_likely_known_text)
             print("2")
+            
+            
+            
