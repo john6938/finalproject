@@ -32,3 +32,20 @@ python3 fp.py austen-emma.txt shakespeare-caesar.txt austen-sense.txt RUN
 In this case, the known texts are *austen-emma.txt* and *shakespeare-caesar.txt*, the questioned text is *austen-sense.txt*.
 
 **Step3:** The result is shown in the command line with the name of the most likely text and the value of average difference of type token ratio for each feature.
+
+For example, running the command in the previous example produces the following results;
+
+```
+The most likely text is austen-emma.txt.
+The ratio difference of IN is 0.09860772357723586 %.
+The ratio difference of VB is 0.04171488400488353 %.
+The ratio difference of JJR is 0.7419450000000004 %.
+The ratio difference of JJS is 1.1213952727272738 %.
+The ratio difference of RB is 0.059242662942272005 %.
+The ratio difference of RP is 1.3271435294117642 %.
+The ratio difference of UH is 2.8515679999999994 %.
+The ratio difference of FW is 14.102565000000004 %.
+The ratio difference of Will and Going is 14.102565000000004 %.
+The questioned text "austen-sense.txt" is considered as written by the author of the text "austen-emma.txt".
+```
+
