@@ -49,3 +49,6 @@ The ratio difference of Will and Going is 14.102565000000004 %.
 The questioned text "austen-sense.txt" is considered as written by the author of the text "austen-emma.txt".
 ```
 
+In this case, it is concluded that the questioned text is written by the same author as most likely text.
+
+
