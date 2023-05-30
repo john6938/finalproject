@@ -45,7 +45,7 @@ The ratio difference of RB is 0.059242662942272005 %.
 The ratio difference of VBD is 0.045348647416413486 %.
 The ratio difference of UH is 2.8515679999999994 %.
 The ratio difference of FW is 14.102565000000004 %.
-The ratio difference of Will and Going is 14.102565000000004 %.
+The ratio difference of Will and Going is 2.6197209653092 %.
 The questioned text "austen-sense.txt" is considered as written by the author of the text "austen-emma.txt".
 ```
 
