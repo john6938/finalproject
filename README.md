@@ -42,7 +42,7 @@ The ratio difference of VB is 0.04171488400488353 %.
 The ratio difference of JJR is 0.7419450000000004 %.
 The ratio difference of JJS is 1.1213952727272738 %.
 The ratio difference of RB is 0.059242662942272005 %.
-The ratio difference of RP is 1.3271435294117642 %.
+The ratio difference of VBD is 0.045348647416413486 %.
 The ratio difference of UH is 2.8515679999999994 %.
 The ratio difference of FW is 14.102565000000004 %.
 The ratio difference of Will and Going is 14.102565000000004 %.
