@@ -36,7 +36,7 @@ class Marker:
         tokens = nltk.word_tokenize(self.string)
         self.tokens = nltk.pos_tag(tokens)
 
-    # Find the prepositions using POS tag
+    # Find the markers using POS tag
     def get_list_of_markers(self):
         list_of_markers = []
         for word, tag in self.tokens:
@@ -45,21 +45,21 @@ class Marker:
                 self.num_of_marker += 1
         self.list_of_markers = list_of_markers
 
-    # Count the number of each preposition
+    # Count the number of each marker
     def count_each_marker(self):
         dict_of_markers = {}
-        for preposition in self.list_of_markers:
-            if preposition in dict_of_markers:
-                dict_of_markers[preposition] += 1
+        for marker in self.list_of_markers:
+            if marker in dict_of_markers:
+                dict_of_markers[marker] += 1
             else:
-                dict_of_markers[preposition] = 1
+                dict_of_markers[marker] = 1
         self.dict_of_markers = dict_of_markers
 
-    # Get the ratio of each preposition
+    # Get the ratio of each marker
     def get_ratio(self):
         sorted_dict = sorted(self.dict_of_markers.items(), key=lambda x:x[1], reverse=True)
         ratio_dict = {}
-        for preposition, count in sorted_dict:
+        for marker, count in sorted_dict:
             ratio = (count / self.num_of_marker) * 100
-            ratio_dict[preposition] = round(ratio, 5)
+            ratio_dict[marker] = round(ratio, 5)
         self.ratio_dict = ratio_dict

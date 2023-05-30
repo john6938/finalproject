@@ -11,13 +11,13 @@ THRESHOLD_VB = 0.1
 THRESHOLD_JJR = 2
 THRESHOLD_JJS = 2
 THRESHOLD_RB = 0.85
-THRESHOLD_RP = 3
+THRESHOLD_VBD = 0.2
 THRESHOLD_UH = 6
 THRESHOLD_FW = 20
 THRESHOLD_WILL_GOING = 10
 
 THRESHOLD_LIST = [THRESHOLD_IN, THRESHOLD_VB, THRESHOLD_JJR, THRESHOLD_JJS, 
-                THRESHOLD_RB, THRESHOLD_RP, THRESHOLD_UH, THRESHOLD_FW, THRESHOLD_WILL_GOING]
+                THRESHOLD_RB, THRESHOLD_VBD, THRESHOLD_UH, THRESHOLD_FW, THRESHOLD_WILL_GOING]
 
 THRESHOLD_FOR_VERLIFICATION = 8
 
@@ -139,7 +139,7 @@ if __name__ == '__main__':
 
     most_likely_known_text = find_most_likely_text(known_text_1, known_text_2, questioned_text)
 
-    tags = ["IN", "VB", "JJR", "JJS", "RB", "RP", "UH", "FW"]
+    tags = ["IN", "VB", "JJR", "JJS", "RB", "VBD", "UH", "FW"]
     ratio_diff_list = []
 
     marker_known_text = marker.Marker(most_likely_known_text)
@@ -197,6 +197,3 @@ if __name__ == '__main__':
         if sys.argv[4] == "TEST":
             print(most_likely_known_text)
             print("2")
-            
-            
-            

@@ -11,7 +11,10 @@ print("\n--- Test 1 ---------------------\n")
 for line in cp_split[:-2]:
     print(line)
 if cp_split[-2] == "chesterton-brown.txt" and cp_split[-1] == "1":
+    print("CORRECT")
     correct += 1
+else:
+    print("FAIL")
 print("\n--------------------------------\n")
 
 # Test2
@@ -22,7 +25,10 @@ print("\n--- Test 2 ---------------------\n")
 for line in cp_split[:-2]:
     print(line)
 if cp_split[-1] == "2":
+    print("CORRECT")
     correct += 1
+else:
+    print("FAIL")
 print("\n--------------------------------\n")
 
 # Test3
@@ -33,7 +39,10 @@ print("\n--- Test 3 ---------------------\n")
 for line in cp_split[:-2]:
     print(line)
 if cp_split[-2] == "austen-emma.txt" and cp_split[-1] == "1":
+    print("CORRECT")
     correct += 1
+else:
+    print("FAIL")
 print("\n--------------------------------\n")
 
 # Test4
@@ -44,7 +53,10 @@ print("\n--- Test 4 ---------------------\n")
 for line in cp_split[:-2]:
     print(line)
 if cp_split[-1] == "2":
+    print("CORRECT")
     correct += 1
+else:
+    print("FAIL")
 print("\n--------------------------------\n")
 
 # Test5
@@ -55,7 +67,10 @@ print("\n--- Test 5 ---------------------\n")
 for line in cp_split[:-2]:
     print(line)
 if cp_split[-1] == "2":
+    print("CORRECT")
     correct += 1
+else:
+    print("FAIL")
 print("\n--------------------------------\n")
 
 # Test6
@@ -66,7 +81,10 @@ print("\n--- Test 6 ---------------------\n")
 for line in cp_split[:-2]:
     print(line)
 if cp_split[-2] == "shakespeare-caesar.txt" and cp_split[-1] == "1":
+    print("CORRECT")
     correct += 1
+else:
+    print("FAIL")
 print("\n--------------------------------\n")
 
 # Test7
@@ -77,7 +95,10 @@ print("\n--- Test 7 ---------------------\n")
 for line in cp_split[:-2]:
     print(line)
 if cp_split[-1] == "1":
+    print("CORRECT")
     correct += 1
+else:
+    print("FAIL")
 print("\n--------------------------------\n")
 
 # Test8
@@ -88,7 +109,10 @@ print("\n--- Test 8 ---------------------\n")
 for line in cp_split[:-2]:
     print(line)
 if cp_split[-1] == "2":
+    print("CORRECT")
     correct += 1
+else:
+    print("FAIL")
 print("\n--------------------------------\n")
 
 # Test9
@@ -99,7 +123,10 @@ print("\n--- Test 9 ---------------------\n")
 for line in cp_split[:-2]:
     print(line)
 if cp_split[-1] == "2":
+    print("CORRECT")
     correct += 1
+else:
+    print("FAIL")
 print("\n--------------------------------\n")
 
 # Test10
@@ -110,7 +137,10 @@ print("\n--- Test 10 --------------------\n")
 for line in cp_split[:-2]:
     print(line)
 if cp_split[-2] == "shakespeare-caesar.txt" and cp_split[-1] == "1":
+    print("CORRECT")
     correct += 1
+else:
+    print("FAIL") 
 print("\n--------------------------------\n")
 
 print("Accuracy: {}%".format((correct / total) * 100))
