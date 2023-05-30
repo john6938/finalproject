@@ -173,7 +173,7 @@ if __name__ == '__main__':
     will_going_ratio_diff = get_ratio_difference(verb_known_text, verb_questioned_text)
     ratio_diff_list.append(will_going_ratio_diff)
 
-    print("The ratio difference of Will and Going is {} %.".format(marker_ratio_diff))
+    print("The ratio difference of Will and Going is {} %.".format(will_going_ratio_diff))
 
 
     # Verlification process
