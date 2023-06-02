@@ -6,20 +6,20 @@ import nltk
 import matplotlib.pyplot as plt
 
 # Threshold value for each marker (These values should be considered carefully)
-THRESHOLD_IN = 0.85
-THRESHOLD_VB = 0.1
-THRESHOLD_JJR = 2
-THRESHOLD_JJS = 2
-THRESHOLD_RB = 0.85
-THRESHOLD_VBD = 0.2
+THRESHOLD_IN = 0.2
+THRESHOLD_VB = 0.11
+THRESHOLD_JJR = 1
+THRESHOLD_JJS = 1.5
+THRESHOLD_RB = 0.14
+THRESHOLD_VBD = 0.1
 THRESHOLD_UH = 6
-THRESHOLD_FW = 20
-THRESHOLD_WILL_GOING = 10
+THRESHOLD_FW = 10
+THRESHOLD_WILL_GOING = 7
 
 THRESHOLD_LIST = [THRESHOLD_IN, THRESHOLD_VB, THRESHOLD_JJR, THRESHOLD_JJS, 
                 THRESHOLD_RB, THRESHOLD_VBD, THRESHOLD_UH, THRESHOLD_FW, THRESHOLD_WILL_GOING]
 
-THRESHOLD_FOR_VERLIFICATION = 8
+THRESHOLD_FOR_VERLIFICATION = 7
 
 
 nltk.download('punkt')
@@ -175,7 +175,6 @@ if __name__ == '__main__':
 
     print("The ratio difference of Will and Going is {} %.".format(will_going_ratio_diff))
 
-
     # Verlification process
     num_of_satisfied_condition = 0
     for i, th in enumerate(THRESHOLD_LIST):
@@ -195,5 +194,5 @@ if __name__ == '__main__':
             print("The text \"{}\" is NOT considered as written by the author of the text \"{}\".".format(questioned_text, most_likely_known_text))
         # For Test
         if sys.argv[4] == "TEST":
-            print(most_likely_known_text)
+            print("") # dummy
             print("2")

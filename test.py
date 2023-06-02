@@ -1,7 +1,7 @@
 import subprocess
 
 correct = 0
-total = 10
+total = 15
 
 # Test1
 cp = subprocess.run(["python3", "fp.py", "milton-paradise.txt", "chesterton-brown.txt", "chesterton-ball.txt", "TEST"],
@@ -141,6 +141,76 @@ if cp_split[-2] == "shakespeare-caesar.txt" and cp_split[-1] == "1":
     correct += 1
 else:
     print("FAIL") 
+print("\n--------------------------------\n")
+
+# Test11
+cp = subprocess.run(["python3", "fp.py", "milton-paradise.txt", "carroll-alice.txt", "austen-emma.txt", "TEST"],
+                    encoding='utf-8', stdout=subprocess.PIPE)
+cp_split = cp.stdout.splitlines()
+print("\n--- Test 11 --------------------\n")
+for line in cp_split[:-2]:
+    print(line)
+if cp_split[-1] == "2":
+    print("CORRECT")
+    correct += 1
+else:
+    print("FAIL")
+print("\n--------------------------------\n")
+
+# Test12
+cp = subprocess.run(["python3", "fp.py", "milton-paradise.txt", "austen-persuasion.txt", "bible-kjv.txt", "TEST"],
+                    encoding='utf-8', stdout=subprocess.PIPE)
+cp_split = cp.stdout.splitlines()
+print("\n--- Test 12 --------------------\n")
+for line in cp_split[:-2]:
+    print(line)
+if cp_split[-1] == "2":
+    print("CORRECT")
+    correct += 1
+else:
+    print("FAIL")
+print("\n--------------------------------\n")
+
+# Test13
+cp = subprocess.run(["python3", "fp.py", "milton-paradise.txt", "austen-persuasion.txt", "austen-sense.txt", "TEST"],
+                    encoding='utf-8', stdout=subprocess.PIPE)
+cp_split = cp.stdout.splitlines()
+print("\n--- Test 13 --------------------\n")
+for line in cp_split[:-2]:
+    print(line)
+if cp_split[-2] == "austen-persuasion.txt" and cp_split[-1] == "1":
+    print("CORRECT")
+    correct += 1
+else:
+    print("FAIL")
+print("\n--------------------------------\n")
+
+# Test14
+cp = subprocess.run(["python3", "fp.py", "austen-persuasion.txt", "melville-moby_dick.txt", "chesterton-thursday.txt", "TEST"],
+                    encoding='utf-8', stdout=subprocess.PIPE)
+cp_split = cp.stdout.splitlines()
+print("\n--- Test 14 --------------------\n")
+for line in cp_split[:-2]:
+    print(line)
+if cp_split[-1] == "2":
+    print("CORRECT")
+    correct += 1
+else:
+    print("FAIL")
+print("\n--------------------------------\n")
+
+# Test15
+cp = subprocess.run(["python3", "fp.py", "bryant-stories.txt", "bible-kjv.txt", "melville-moby_dick.txt", "TEST"],
+                    encoding='utf-8', stdout=subprocess.PIPE)
+cp_split = cp.stdout.splitlines()
+print("\n--- Test 15 --------------------\n")
+for line in cp_split[:-2]:
+    print(line)
+if cp_split[-1] == "2":
+    print("CORRECT")
+    correct += 1
+else:
+    print("FAIL")
 print("\n--------------------------------\n")
 
 print("Accuracy: {}%".format((correct / total) * 100))
